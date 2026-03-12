@@ -20,7 +20,9 @@ db.connect((err)=>{
     console.log("Database connected");
   }
 });
-
+app.get("/", (req, res) => {
+  res.redirect("/users");
+});
 app.get("/users", (req,res)=>{
     db.query("SELECT * FROM users",(err,result)=>{
         if(err){
