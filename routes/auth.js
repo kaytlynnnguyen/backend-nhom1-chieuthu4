@@ -8,20 +8,27 @@ const User = require('../models/User');
 router.post('/register', async (req, res) => {
     try {
         const { firstName, lastName, email, password } = req.body;
+        
+        // Kiểm tra dữ liệu đầu vào (phòng hờ lỗi undefined từ frontend)
+        if (!password) {
+            return res.status(400).json({ msg: 'Mật khẩu không được để trống' });
+        }
+
         let user = await User.findOne({ email });
         if (user) return res.status(400).json({ msg: 'Email này đã tồn tại!' });
 
-        const salt = await bcrypt.getSalt(10);
+        // SỬA TẠI ĐÂY: đổi getSalt thành genSalt
+        const salt = await bcrypt.genSalt(10); 
         const hashedPassword = await bcrypt.hash(password, salt);
 
         user = new User({ firstName, lastName, email, password: hashedPassword });
         await user.save();
         res.status(201).json({ msg: 'Đăng ký thành công!' });
     } catch (err) {
-        console.error(err.message);
-        res.status(500).send('Lỗi máy chủ');
+        console.error("Lỗi đăng ký:", err.message); // In lỗi chi tiết ra console
+        res.status(500).json({ msg: 'Lỗi máy chủ', error: err.message });
     }
-}); // Kết thúc route register
+});
 
 // 2. ROUTE ĐĂNG NHẬP
 router.post('/login', async (req, res) => {
