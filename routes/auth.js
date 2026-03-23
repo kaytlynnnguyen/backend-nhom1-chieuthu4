@@ -1,43 +1,56 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcryptjs'); // Thư viện mã hóa mật khẩu
+const bcrypt = require('bcryptjs'); 
+const jwt = require('jsonwebtoken'); 
 const User = require('../models/User');
 
-// ĐỊA CHỈ: POST /api/auth/register
+// 1. ROUTE ĐĂNG KÝ
 router.post('/register', async (req, res) => {
     try {
-        // 1. Nhận dữ liệu từ Frontend gửi lên
         const { firstName, lastName, email, password } = req.body;
-
-        // 2. Kiểm tra xem email này đã có ai đăng ký chưa
         let user = await User.findOne({ email });
-        if (user) {
-            return res.status(400).json({ msg: 'Email này đã tồn tại!' });
-        }
+        if (user) return res.status(400).json({ msg: 'Email này đã tồn tại!' });
 
-        // 3. MÃ HÓA MẬT KHẨU (Hash)
-        // Tạo một "chuỗi muối" ngẫu nhiên
-        const salt = await bcrypt.genSalt(10);
-        // Trộn mật khẩu thật với muối để ra chuỗi loằng ngoằng $2b$10...
+        const salt = await bcrypt.getSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
 
-        // 4. Tạo một người dùng mới từ cái "khuôn" User
-        user = new User({
-            firstName,
-            lastName,
-            email,
-            password: hashedPassword // Lưu mật khẩu đã mã hóa, không lưu mật khẩu thật
-        });
-
-        // 5. Lưu xuống Database
+        user = new User({ firstName, lastName, email, password: hashedPassword });
         await user.save();
-
         res.status(201).json({ msg: 'Đăng ký thành công!' });
-
     } catch (err) {
         console.error(err.message);
         res.status(500).send('Lỗi máy chủ');
     }
-});
+}); // Kết thúc route register
+
+// 2. ROUTE ĐĂNG NHẬP
+router.post('/login', async (req, res) => {
+    try {
+        const { email, password } = req.body;
+
+        // Kiểm tra user tồn tại
+        const user = await User.findOne({ email });
+        if (!user) return res.status(400).json({ msg: 'Thông tin đăng nhập không chính xác' });
+
+        // So sánh mật khẩu
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) return res.status(400).json({ msg: 'Thông tin đăng nhập không chính xác' });
+
+        // Tạo chuỗi mã hóa JWT
+        const token = jwt.sign(
+            { id: user._id }, 
+            process.env.JWT_SECRET, 
+            { expiresIn: '1h' }
+        );
+
+        res.json({
+            token,
+            user: { id: user._id, firstName: user.firstName, email: user.email }
+        });
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).send('Lỗi máy chủ');
+    }
+}); // Kết thúc route login
 
 module.exports = router;
