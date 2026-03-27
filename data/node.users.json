@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "69502608971ec7e61717f819"
+  },
+  "firstName": "phuongminh",
+  "lastName": "minh",
+  "email": "minhhh2004@gmail.com",
+  "password": "$2b$10$KkzLAMifXTun5GttKLclQOyKs6bLVDYDb8Ed9AxMLkbGHPICvNRvm",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69502659971ec7e61717f92f"
+  },
+  "firstName": "bca",
+  "lastName": "bca",
+  "email": "cab@gmail.com",
+  "password": "$2b$10$tsLVzZoK6G4y7SsNBGHZe.9R1yS7y32ss5E3ZF4N/5Yq3A3q6JoQa",
+  "isActive": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69502702971ec7e61717fcad"
+  },
+  "firstName": "phuongminh",
+  "lastName": "minh",
+  "email": "minh204@gmail.com",
+  "password": "$2b$10$74zCLyKj6xQA0MPdikkTcO9LGVLz7VilkimkON6B95QjuEXzWPTuO",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69502f74e0905c3f52d381ae"
+  },
+  "firstName": "minhminh",
+  "lastName": "minh",
+  "email": "minhminh2004@gmail.com",
+  "password": "$2b$10$S4lKWC6rWPNtljmdj9ib3OpG9EyIAvxW62L5bTEdw5BOKXmkVvrT.",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "695097dd32a36a7be1c105c2"
+  },
+  "firstName": "abcd",
+  "lastName": "abcd",
+  "email": "abdce@gmail.com",
+  "password": "$2b$10$pdLeJ6yzKJI4XgEEjyJXa.CNL3TQ4/wrNYZMZyDoStatVH2yUs3i.",
+  "isActive": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6950c9ea98030d7781fe5a72"
+  },
+  "firstName": "maimai",
+  "lastName": "mai",
+  "email": "mai2003@gmail.com",
+  "password": "$2b$10$K9RI9NzXJWrqOLrzH3yw8uLY72QkJe3o8SRH8T2dMc2dFaImSmHj.",
+  "isActive": true,
+  "__v": 0
+}]

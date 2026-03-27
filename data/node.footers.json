@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "6950aa7574b1da004b4381d7"
+  },
+  "shopName": "Shop Hoa Tươi Fresh Flowers",
+  "slogan": "Chẳng phải đợi lâu, bạn chỉ cần đặt hàng và hoa sẽ được giao tận nơi trong chưa đầy 1h.",
+  "address": "180 Cao Lỗ, Phường 4, Quận 8, TP.HCMm",
+  "hotline": "03 5932 9912",
+  "email": "ngoclan121204@gmail.com",
+  "openHours": "08:00 - 21:00 (Daily)",
+  "support1": "Chính Sách Trả Hàng",
+  "support2": "Chính Sách Bảo Hành",
+  "support3": "Chính Sách Mua Hàng",
+  "support4": "Chính Sách Người Dùng",
+  "tag1": "Shop Tươi Fresh Flowers",
+  "tag2": "N&Fresh Flowers",
+  "copyright": "2025 N&Fresh Flowers. All rights reserved.",
+  "__v": 0
+}]

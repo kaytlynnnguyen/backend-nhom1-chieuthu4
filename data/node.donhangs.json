@@ -1,0 +1,479 @@
+[{
+  "_id": {
+    "$oid": "694a61f7db6f250696ae299e"
+  },
+  "user": {
+    "name": "MAI",
+    "phone": "0123456789",
+    "address": "QUẬN 8",
+    "email": "mai2003@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Hoa tulip trắng",
+      "qty": 4,
+      "price": 350000,
+      "img": "/img/8.jpg",
+      "_id": {
+        "$oid": "694a61f7db6f250696ae299f"
+      }
+    }
+  ],
+  "total": 1400000,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-12-23T09:33:43.247Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-23T09:33:43.247Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "694a62d1db6f250696ae2ad4"
+  },
+  "user": {
+    "name": "maimai",
+    "phone": "0359329912",
+    "address": "Tây Ninh",
+    "email": "MAIMAI2003@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Hoa hướng dương cao cấp",
+      "qty": 3,
+      "price": 350000,
+      "img": "/img/13.jpg",
+      "_id": {
+        "$oid": "694a62d1db6f250696ae2ad5"
+      }
+    },
+    {
+      "name": "Giỏ Hoa 81351",
+      "qty": 1,
+      "price": 500000,
+      "img": "/img/4.jpg",
+      "_id": {
+        "$oid": "694a62d1db6f250696ae2ad6"
+      }
+    }
+  ],
+  "total": 1550000,
+  "status": "completed",
+  "createdAt": {
+    "$date": "2025-12-23T09:37:21.801Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-23T09:37:40.465Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "694a641fad095a509a9e5315"
+  },
+  "user": {
+    "name": "ngọc",
+    "phone": "1234567890",
+    "address": "quận 7",
+    "email": "NGOC122004@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Bó hoa 75413",
+      "qty": 2,
+      "price": 600000,
+      "img": "/img/17.jpg",
+      "_id": {
+        "$oid": "694a641fad095a509a9e5316"
+      }
+    },
+    {
+      "name": "Giỏ Hoa Sen Đá",
+      "qty": 1,
+      "price": 600000,
+      "img": "/img/24.jpg",
+      "_id": {
+        "$oid": "694a641fad095a509a9e5317"
+      }
+    }
+  ],
+  "total": 1800000,
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-12-23T09:42:55.450Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-23T09:43:15.897Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "694a65ec9caea2ecacb86fe0"
+  },
+  "user": {
+    "name": "BCA",
+    "phone": "33333",
+    "address": "TÂY NINH",
+    "email": "bca@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Bó hoa 81345",
+      "qty": 4,
+      "price": 600000,
+      "img": "/img/18.jpg",
+      "_id": {
+        "$oid": "694a65ec9caea2ecacb86fe1"
+      }
+    }
+  ],
+  "total": 2400000,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-12-23T09:50:36.128Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-23T09:50:36.128Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "694b98ce560539a7503908ba"
+  },
+  "user": {
+    "name": "maimai",
+    "phone": "0123456789",
+    "address": "quận 8",
+    "email": "ngocmai2003@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Hoa cẩm tú cầu",
+      "qty": 1,
+      "price": 400000,
+      "img": "/img/10.jpg",
+      "_id": {
+        "$oid": "694b98ce560539a7503908bb"
+      }
+    }
+  ],
+  "total": 400000,
+  "status": "completed",
+  "createdAt": {
+    "$date": "2025-12-24T07:39:58.491Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-24T17:23:13.508Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "694c28cc61da75f88265a132"
+  },
+  "user": {
+    "name": "minh",
+    "phone": "0123456789",
+    "address": "TRường ĐH Công Nghệ Sài Gòn",
+    "email": "minh204@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Hoa tulip trắng",
+      "qty": 1,
+      "price": 350000,
+      "img": "/img/8.jpg",
+      "_id": {
+        "$oid": "694c28cc61da75f88265a133"
+      }
+    }
+  ],
+  "total": 350000,
+  "status": "cancelled",
+  "createdAt": {
+    "$date": "2025-12-24T17:54:20.196Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-24T17:58:04.153Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "694c34ee67f989e19a3a7e72"
+  },
+  "user": {
+    "name": "minh",
+    "phone": "1234567890",
+    "address": "quận 8",
+    "email": "MINH2004@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Hoa tulip trắng",
+      "qty": 1,
+      "price": 350000,
+      "img": "/img/8.jpg",
+      "_id": {
+        "$oid": "694c34ee67f989e19a3a7e73"
+      }
+    }
+  ],
+  "total": 350000,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-12-24T18:46:06.469Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-24T18:46:06.469Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "694c361667f989e19a3a7fe7"
+  },
+  "user": {
+    "name": "minh",
+    "phone": "0123456789",
+    "address": "quận 8",
+    "email": "MINH2004@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Hoa cẩm tú cầu",
+      "qty": 3,
+      "price": 400000,
+      "img": "/img/10.jpg",
+      "_id": {
+        "$oid": "694c361667f989e19a3a7fe8"
+      }
+    }
+  ],
+  "total": 1200000,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-12-24T18:51:02.387Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-24T18:51:02.387Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "694c36a267f989e19a3a809e"
+  },
+  "user": {
+    "name": "abc",
+    "phone": "0123456789",
+    "address": "quận 8",
+    "email": "abc@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Hoa cẩm tú cầu",
+      "qty": 2,
+      "price": 400000,
+      "img": "/img/10.jpg",
+      "_id": {
+        "$oid": "694c36a267f989e19a3a809f"
+      }
+    },
+    {
+      "name": "Bó hoa 12049",
+      "qty": 1,
+      "price": 700000,
+      "img": "/img/16.jpg",
+      "_id": {
+        "$oid": "694c36a267f989e19a3a80a0"
+      }
+    }
+  ],
+  "total": 1500000,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-12-24T18:53:22.287Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-24T18:53:22.287Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "695026bd971ec7e61717fbd4"
+  },
+  "user": {
+    "name": "bca",
+    "phone": "0123456789",
+    "address": "quận 8",
+    "email": "cab@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Hoa cẩm tú cầu",
+      "qty": 3,
+      "price": 400000,
+      "img": "/img/10.jpg",
+      "_id": {
+        "$oid": "695026bd971ec7e61717fbd5"
+      }
+    },
+    {
+      "name": "Hoa mẫu mới",
+      "qty": 1,
+      "price": 400000,
+      "img": "/img/15.jpg",
+      "_id": {
+        "$oid": "695026bd971ec7e61717fbd6"
+      }
+    }
+  ],
+  "total": 1600000,
+  "status": "completed",
+  "createdAt": {
+    "$date": "2025-12-27T18:34:37.616Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-27T18:34:57.723Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69502718971ec7e61717fd20"
+  },
+  "user": {
+    "name": "minh",
+    "phone": "0359329912",
+    "address": "quận 8",
+    "email": "minh204@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Hoa hồng trắng",
+      "qty": 4,
+      "price": 300000,
+      "img": "/img/3.jpg",
+      "_id": {
+        "$oid": "69502718971ec7e61717fd21"
+      }
+    }
+  ],
+  "total": 1200000,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-12-27T18:36:08.331Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-27T18:37:13.288Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69502f61e0905c3f52d38164"
+  },
+  "user": {
+    "name": "minh",
+    "phone": "0123456789",
+    "address": "quận 8",
+    "email": "minh204@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Hoa hướng dương",
+      "qty": 4,
+      "price": 300000,
+      "img": "/img/1.jpg",
+      "_id": {
+        "$oid": "69502f61e0905c3f52d38165"
+      }
+    }
+  ],
+  "total": 1200000,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-12-27T19:11:29.171Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-27T19:11:29.171Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "695098db32a36a7be1c10891"
+  },
+  "user": {
+    "name": "abcd",
+    "phone": "0123456789",
+    "address": "quận 8",
+    "email": "abdce@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Hoa mẫu mới",
+      "qty": 3,
+      "price": 400000,
+      "img": "/img/15.jpg",
+      "_id": {
+        "$oid": "695098db32a36a7be1c10892"
+      }
+    },
+    {
+      "name": "Giỏ Hoa 81351",
+      "qty": 1,
+      "price": 500000,
+      "img": "/img/4.jpg",
+      "_id": {
+        "$oid": "695098db32a36a7be1c10893"
+      }
+    }
+  ],
+  "total": 1700000,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-12-28T02:41:31.654Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-28T02:41:31.654Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6950cb67c795fb1d0d3d7f57"
+  },
+  "user": {
+    "name": "Mai",
+    "phone": "0123456789",
+    "address": "quận 8",
+    "email": "mai2003@gmail.com"
+  },
+  "items": [
+    {
+      "name": "Hoa cẩm tú cầu",
+      "qty": 1,
+      "price": 400000,
+      "img": "/img/10.jpg",
+      "_id": {
+        "$oid": "6950cb67c795fb1d0d3d7f58"
+      }
+    }
+  ],
+  "total": 400000,
+  "status": "pending",
+  "createdAt": {
+    "$date": "2025-12-28T06:17:11.080Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-28T06:17:11.080Z"
+  },
+  "__v": 0
+}]
