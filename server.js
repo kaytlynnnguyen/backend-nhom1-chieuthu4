@@ -194,7 +194,7 @@ app.use(cors({
 // 👇 THÊM Ở ĐÂY
 console.log("CORS ACTIVE");
 
-app.options('*', cors());
+app.options('/*', cors());
 
 app.use(express.json());
 
