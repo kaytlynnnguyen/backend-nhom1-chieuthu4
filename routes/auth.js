@@ -45,18 +45,23 @@ router.post('/login', async (req, res) => {
 
         // Tạo chuỗi mã hóa JWT
         const token = jwt.sign(
-            { id: user._id }, 
-            process.env.JWT_SECRET, 
+            { id: user._id },
+            process.env.JWT_SECRET,
             { expiresIn: '1h' }
         );
 
         res.json({
             token,
-            user: { id: user._id, firstName: user.firstName, email: user.email }
+            user: {
+                id: user._id,
+                firstName: user.firstName,
+                lastName: user.lastName,
+                email: user.email
+            }
         });
     } catch (err) {
         console.error(err.message);
-        res.status(500).send('Lỗi máy chủ');
+        res.status(500).json({ msg: 'Lỗi máy chủ', error: err.message });
     }
 }); // Kết thúc route login
 

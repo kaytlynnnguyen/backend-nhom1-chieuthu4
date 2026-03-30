@@ -14,6 +14,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:3000",
+    "http://127.0.0.1:3000",
     "https://frontend-nhom1-chieuthu4-1.onrender.com"
   ],
   credentials: true
@@ -24,9 +25,14 @@ app.use(express.json());
 
 // ================== MONGODB ==================
 const MONGO_URI = process.env.MONGO_URI;
+const JWT_SECRET = process.env.JWT_SECRET;
 
 if (!MONGO_URI) {
   console.error("❌ Chưa có MONGO_URI trong file .env");
+  process.exit(1);
+}
+if (!JWT_SECRET) {
+  console.error("❌ Chưa có JWT_SECRET trong file .env");
   process.exit(1);
 }
 
@@ -89,7 +95,7 @@ function readFlowerData() {
   return parsed.map((flower, idx) => ({
     id: flower.id || idx + 1,
     name: flower.name || 'Không rõ',
-    image: flower.image || '',
+    image: (flower.image && String(flower.image).trim()) || '/flower_pics/1.jpg',
     price: Number(flower.price) || 0,
     category: flower.category || 'unknown',
     description: flower.description || '',

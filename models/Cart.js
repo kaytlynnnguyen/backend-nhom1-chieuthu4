@@ -39,12 +39,13 @@ const CartSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Tính tổng tiền khi lưu
-CartSchema.pre('save', function(next) {
+// Tính tổng tiền khi lưu (Mongoose 9: không dùng next() trong pre sync)
+CartSchema.pre('save', function() {
   this.totalAmount = this.items.reduce((total, item) => {
-    return total + (item.price * item.quantity);
+    const price = Number(item.price) || 0;
+    const qty = Number(item.quantity) || 0;
+    return total + price * qty;
   }, 0);
-  next();
 });
 
 module.exports = mongoose.model('Cart', CartSchema);

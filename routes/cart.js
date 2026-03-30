@@ -32,7 +32,8 @@ function readFlowerData() {
   return parsed.map((flower, idx) => ({
     id: flower.id || idx + 1,
     name: flower.name || 'Không rõ',
-    image: flower.image || '',
+    // Cart schema bắt buộc image !== ''; chuỗi rỗng gây ValidationError 500
+    image: (flower.image && String(flower.image).trim()) || '/flower_pics/1.jpg',
     price: Number(flower.price) || 0,
     category: flower.category || 'unknown',
     description: flower.description || '',
@@ -41,18 +42,38 @@ function readFlowerData() {
   }));
 }
 
+function normalizeQuantity(q) {
+  const n = Number(q);
+  if (!Number.isFinite(n) || n < 1) return 1;
+  return Math.floor(n);
+}
+
+function cartItemPayload(flower, quantity) {
+  return {
+    flowerId: flower.id,
+    name: flower.name,
+    image: flower.image,
+    price: flower.price,
+    quantity: normalizeQuantity(quantity)
+  };
+}
+
 // POST /cart/add - Thêm sản phẩm vào giỏ hàng
 router.post('/add', auth, async (req, res) => {
   try {
-    const { flowerId, quantity = 1 } = req.body;
-    if (!flowerId) return res.status(400).json({ message: 'Thiếu flowerId' });
+    const { flowerId, quantity: rawQty } = req.body;
+    const fid = Number(flowerId);
+    if (flowerId === undefined || flowerId === null || flowerId === '' || !Number.isFinite(fid)) {
+      return res.status(400).json({ message: 'Thiếu hoặc flowerId không hợp lệ' });
+    }
+    const addQty = normalizeQuantity(rawQty);
 
     const userId = resolveUserId(req, res);
     if (!userId) return;
 
     // Lấy thông tin hoa từ file JSON
     const flowers = readFlowerData();
-    const flower = flowers.find(f => f.id === Number(flowerId));
+    const flower = flowers.find(f => f.id === fid);
 
     if (!flower) {
       return res.status(404).json({ message: 'Không tìm thấy sản phẩm' });
@@ -65,30 +86,18 @@ router.post('/add', auth, async (req, res) => {
       // Tạo giỏ hàng mới nếu chưa có
       cart = new Cart({
         userId,
-        items: [{
-          flowerId: flower.id,
-          name: flower.name,
-          image: flower.image,
-          price: flower.price,
-          quantity: quantity
-        }]
+        items: [cartItemPayload(flower, addQty)]
       });
     } else {
       // Kiểm tra xem sản phẩm đã có trong giỏ chưa
       const existingItem = cart.items.find(item => item.flowerId === flower.id);
 
       if (existingItem) {
-        // Tăng số lượng nếu đã có
-        existingItem.quantity += quantity;
+        // Tăng số lượng nếu đã có (số nguyên, tránh nối chuỗi)
+        existingItem.quantity = normalizeQuantity(existingItem.quantity) + addQty;
       } else {
         // Thêm sản phẩm mới
-        cart.items.push({
-          flowerId: flower.id,
-          name: flower.name,
-          image: flower.image,
-          price: flower.price,
-          quantity: quantity
-        });
+        cart.items.push(cartItemPayload(flower, addQty));
       }
     }
 
@@ -179,10 +188,9 @@ router.put('/:id', auth, async (req, res) => {
     const userId = resolveUserId(req, res);
     if (!userId) return;
     const flowerId = Number(req.params.id);
-    const { quantity } = req.body;
-
-    if (quantity < 1) {
-      return res.status(400).json({ message: 'Số lượng phải lớn hơn 0' });
+    const qty = normalizeQuantity(req.body.quantity);
+    if (!Number.isFinite(flowerId)) {
+      return res.status(400).json({ message: 'ID sản phẩm không hợp lệ' });
     }
 
     const cart = await Cart.findOne({ userId });
@@ -197,7 +205,7 @@ router.put('/:id', auth, async (req, res) => {
       return res.status(404).json({ message: 'Không tìm thấy sản phẩm trong giỏ hàng' });
     }
 
-    item.quantity = quantity;
+    item.quantity = qty;
     await cart.save();
 
     res.json({
