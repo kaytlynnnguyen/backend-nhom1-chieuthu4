@@ -191,10 +191,6 @@ app.use(cors({
   credentials: true
 }));
 
-// 👇 THÊM Ở ĐÂY
-console.log("CORS ACTIVE");
-
-app.options('/*', cors());
 
 app.use(express.json());
 
