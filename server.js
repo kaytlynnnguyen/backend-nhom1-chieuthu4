@@ -184,10 +184,18 @@ const User = require('./models/User');
 const app = express();
 //app.use(cors());
 app.use(cors({
-  origin: "http://localhost:3000", // frontend của bạn
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: [
+    "http://localhost:3000",
+    "https://frontend-nhom1-chieuthu4-1.onrender.com"
+  ],
   credentials: true
 }));
+
+// 👇 THÊM Ở ĐÂY
+console.log("CORS ACTIVE");
+
+app.options('*', cors());
+
 app.use(express.json());
 
 // ================== MONGODB ==================
