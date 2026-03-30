@@ -4,6 +4,7 @@ const Cart = require('../models/Cart');
 const auth = require('../middleware/auth');
 const fs = require('fs');
 const path = require('path');
+const mongoose = require('mongoose');
 
 // Helper function to read flower data
 function readFlowerData() {
@@ -26,7 +27,7 @@ function readFlowerData() {
 router.post('/add', auth, async (req, res) => {
   try {
     const { flowerId, quantity = 1 } = req.body;
-    const userId = req.user.id;
+    const userId = new mongoose.Types.ObjectId(req.user.id);
 
     // Lấy thông tin hoa từ file JSON
     const flowers = readFlowerData();
@@ -89,7 +90,7 @@ router.post('/add', auth, async (req, res) => {
 // GET /cart - Lấy giỏ hàng của user
 router.get('/', auth, async (req, res) => {
   try {
-    const userId = req.user.id;
+    const userId = new mongoose.Types.ObjectId(req.user.id);
     const cart = await Cart.findOne({ userId });
 
     if (!cart) {
@@ -115,7 +116,7 @@ router.get('/', auth, async (req, res) => {
 // DELETE /cart/:id - Xóa sản phẩm khỏi giỏ hàng
 router.delete('/:id', auth, async (req, res) => {
   try {
-    const userId = req.user.id;
+    const userId = new mongoose.Types.ObjectId(req.user.id);
     const flowerId = Number(req.params.id);
 
     const cart = await Cart.findOne({ userId });
@@ -152,7 +153,7 @@ router.delete('/:id', auth, async (req, res) => {
 // PUT /cart/:id - Cập nhật số lượng sản phẩm
 router.put('/:id', auth, async (req, res) => {
   try {
-    const userId = req.user.id;
+    const userId = new mongoose.Types.ObjectId(req.user.id);
     const flowerId = Number(req.params.id);
     const { quantity } = req.body;
 
