@@ -182,7 +182,12 @@ const authRoutes = require("./routes/auth");
 const User = require('./models/User'); 
 
 const app = express();
-app.use(cors());
+//app.use(cors());
+app.use(cors({
+  origin: "http://localhost:3000", // frontend của bạn
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 // ================== MONGODB ==================
