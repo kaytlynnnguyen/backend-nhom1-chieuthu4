@@ -7,19 +7,31 @@ const path = require('path');
 
 const authRoutes = require("./routes/auth"); 
 const cartRoutes = require("./routes/cart");
+const orderRoutes = require("./routes/orders");
 const User = require('./models/User'); 
 
 const app = express();
-//app.use(cors());
-app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "https://frontend-nhom1-chieuthu4-1.onrender.com"
-  ],
-  credentials: true
-}));
+// CORS setup: allow dynamic local dev origins and keep production host safe.
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || process.env.NODE_ENV !== 'production') {
+      return callback(null, true);
+    }
 
+    const allowedOrigins = [
+      'https://frontend-nhom1-chieuthu4-1.onrender.com'
+    ];
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error('CORS policy does not allow this origin'));
+  },
+  credentials: true
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 app.use(express.json());
 
@@ -46,6 +58,7 @@ mongoose.connect(MONGO_URI)
 // ================== ROUTES ==================
 app.use("/api/auth", authRoutes);
 app.use("/api/cart", cartRoutes);
+app.use("/api/orders", orderRoutes);
 
 app.get("/", (req, res) => {
   res.send("🚀 API Web Bán Hoa đang chạy!");
