@@ -9,9 +9,10 @@ const authRoutes = require("./routes/auth");
 const cartRoutes = require("./routes/cart");
 const orderRoutes = require("./routes/orders");
 const User = require('./models/User'); 
+const Flower = require('./models/Flower');
+
 
 const app = express();
-// CORS setup: allow dynamic local dev origins and keep production host safe.
 const corsOptions = {
   origin: (origin, callback) => {
     if (!origin || process.env.NODE_ENV !== 'production') {
@@ -156,8 +157,83 @@ app.get('/flowers/:id', (req, res) => {
   }
 });
 
+// 1. Thêm sản phẩm
+app.post('/flowers', async (req, res) => {
+    try {
+        const newFlower = new Flower(req.body);
+        const savedFlower = await newFlower.save();
+
+        const rawData = fs.readFileSync(flowerDataPath, 'utf8');
+        const currentFlowers = JSON.parse(rawData);
+
+        const flowerToAdd = { 
+            _id: { $oid: savedFlower._id.toString() }, 
+            ...req.body 
+        };
+        currentFlowers.push(flowerToAdd);
+
+        fs.writeFileSync(flowerDataPath, JSON.stringify(currentFlowers, null, 2));
+
+        res.status(201).json(savedFlower);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+});
+
+// 2. Cập nhật sản phẩm
+app.put('/flowers/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        try { await Flower.findByIdAndUpdate(id, req.body); } catch(e) {}
+
+        const rawData = fs.readFileSync(flowerDataPath, 'utf8');
+        let currentFlowers = JSON.parse(rawData);
+
+        // Tìm hoa cần sửa
+        const index = currentFlowers.findIndex(f => 
+            (f._id && f._id.$oid === id) || 
+            (f._id && f._id.toString() === id) || 
+            f.id == id
+        );
+
+        if (index !== -1) {
+            currentFlowers[index] = { ...currentFlowers[index], ...req.body };
+            fs.writeFileSync(flowerDataPath, JSON.stringify(currentFlowers, null, 2));
+            res.json(currentFlowers[index]);
+        } else {
+            res.status(404).json({ message: "Không tìm thấy hoa trong JSON" });
+        }
+    } catch (err) {
+        res.status(400).json({ message: "Lỗi khi cập nhật" });
+    }
+});
+// 3. Xóa sản phẩm
+app.delete('/flowers/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        try { await Flower.findByIdAndDelete(id); } catch(e) {}
+
+        const rawData = fs.readFileSync(flowerDataPath, 'utf8');
+        let currentFlowers = JSON.parse(rawData);
+
+        const filteredFlowers = currentFlowers.filter(f => {
+
+            const fId = f._id?.$oid || f._id || f.id;
+            
+            return String(fId) !== String(id); 
+        });
+
+        fs.writeFileSync(flowerDataPath, JSON.stringify(filteredFlowers, null, 2));
+        res.json({ message: "Đã xóa thành công" });
+    } catch (err) {
+        res.status(500).json({ message: "Lỗi khi xóa" });
+    }
+});
 // ================== SERVER ==================
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server chạy tại: http://localhost:${PORT}`);
 });
+

@@ -1,252 +1,265 @@
-[{
-  "_id": {
-    "$oid": "6947de333fd57890a894b5d2"
+[
+  {
+    "_id": {
+      "$oid": "6947de333fd57890a894b5d2"
+    },
+    "name": "Hoa hồng đỏ",
+    "image": "/flower_pics/1.jpg",
+    "price": 400000,
+    "category": "bohoa",
+    "__v": 0,
+    "description": "Sự kết hợp giữa sắc đỏ thẫm của hoa hồng và giấy gói trắng tinh giản làm nổi bật sự sang trọng.",
+    "meaning": "Biểu tượng bất diệt của tình yêu nồng cháy và sự lãng mạn. Đây là lựa chọn hàng đầu cho các buổi hẹn hò hoặc kỷ niệm."
   },
-  "name": "Hoa hồng đỏ",
-  "image": "/flower_pics/1.jpg",
-  "price": 400000,
-  "category": "bohoa",
-  "__v": 0,
-  "description": "Sự kết hợp giữa sắc đỏ thẫm của hoa hồng và giấy gói trắng tinh giản làm nổi bật sự sang trọng.",
-  "meaning": "Biểu tượng bất diệt của tình yêu nồng cháy và sự lãng mạn. Đây là lựa chọn hàng đầu cho các buổi hẹn hò hoặc kỷ niệm."
-},
-{
-  "_id": {
-    "$oid": "6947e6f6293795506894e1ca"
+  {
+    "_id": {
+      "$oid": "6947e6f6293795506894e1ca"
+    },
+    "name": "Hoa tulip trắng",
+    "image": "/flower_pics/2.jpg",
+    "price": 350000,
+    "category": "bohoa",
+    "__v": 0,
+    "description": "Những bông Tulip trắng vươn dài, gói trong giấy báo cổ điển mang đậm phong cách Châu Âu.",
+    "meaning": "Thể hiện sự thanh cao, mới mẻ và một lời xin lỗi chân thành hoặc mong muốn hòa bình trong một mối quan hệ."
   },
-  "name": "Hoa tulip trắng",
-  "image": "/flower_pics/2.jpg",
-  "price": 350000,
-  "category": "bohoa",
-  "__v": 0,
-  "description": "Những bông Tulip trắng vươn dài, gói trong giấy báo cổ điển mang đậm phong cách Châu Âu.",
-  "meaning": "Thể hiện sự thanh cao, mới mẻ và một lời xin lỗi chân thành hoặc mong muốn hòa bình trong một mối quan hệ."
-},
-{
-  "_id": {
-    "$oid": "6947e73a293795506894e21a"
+  {
+    "_id": {
+      "$oid": "6947e73a293795506894e21a"
+    },
+    "name": "Hoa cẩm tú cầu",
+    "image": "/flower_pics/3.jpg",
+    "price": 400000,
+    "category": "bohoa",
+    "__v": 0,
+    "description": "Đóa cẩm tú cầu xanh dương lớn được bao bọc bởi lớp giấy gói trắng tinh khôi, tạo nên vẻ đẹp thanh tao và dịu mắt.",
+    "meaning": "Tượng trưng cho lòng biết ơn, sự chân thành và những cảm xúc nhẹ nhàng. Màu xanh dương còn mang thông điệp về sự hy vọng và bình yên."
   },
-  "name": "Hoa cẩm tú cầu",
-  "image": "/flower_pics/3.jpg",
-  "price": 400000,
-  "category": "bohoa",
-  "__v": 0,
-  "description": "Đóa cẩm tú cầu xanh dương lớn được bao bọc bởi lớp giấy gói trắng tinh khôi, tạo nên vẻ đẹp thanh tao và dịu mắt.",
-  "meaning": "Tượng trưng cho lòng biết ơn, sự chân thành và những cảm xúc nhẹ nhàng. Màu xanh dương còn mang thông điệp về sự hy vọng và bình yên."
-},
-{
-  "_id": {
-    "$oid": "6947e758293795506894e23a"
+  {
+    "_id": {
+      "$oid": "6947e758293795506894e23a"
+    },
+    "name": "Hoa hồng trắng",
+    "image": "/flower_pics/4.jpg",
+    "price": 300000,
+    "category": "bohoa",
+    "__v": 0,
+    "description": "Bó hoa gồm những đóa hồng trắng cao cấp, kết hợp cùng lá bạc và hoa phụ xanh mát. Thiết kế theo phong cách hiện đại, thanh lịch với giấy gói trắng tối giản.",
+    "meaning": "Tượng trưng cho sự thuần khiết, chân thành và một khởi đầu mới tốt đẹp. Là món quà hoàn hảo để bày tỏ lòng tôn trọng và tình yêu trong sáng."
   },
-  "name": "Hoa hồng trắng",
-  "image": "/flower_pics/4.jpg",
-  "price": 300000,
-  "category": "bohoa",
-  "__v": 0,
-  "description": "Bó hoa gồm những đóa hồng trắng cao cấp, kết hợp cùng lá bạc và hoa phụ xanh mát. Thiết kế theo phong cách hiện đại, thanh lịch với giấy gói trắng tối giản.",
-  "meaning": "Tượng trưng cho sự thuần khiết, chân thành và một khởi đầu mới tốt đẹp. Là món quà hoàn hảo để bày tỏ lòng tôn trọng và tình yêu trong sáng."
-},
-{
-  "_id": {
-    "$oid": "6947e79c293795506894e25b"
+  {
+    "_id": {
+      "$oid": "6947e79c293795506894e25b"
+    },
+    "name": "Hoa hồng trắng kết hợp lá phụ xanh mướt",
+    "image": "/flower_pics/5.jpg",
+    "price": 600000,
+    "category": "bohoa",
+    "__v": 0,
+    "description": "Bó hoa kết hợp nhiều bông hồng trắng nở rộ, xen kẽ lá phụ xanh mướt, gói trong giấy lụa trắng sang trọng.",
+    "meaning": "Đại diện cho tình yêu thuần khiết, sự tôn trọng và khởi đầu mới trọn vẹn. Đây là lựa chọn hoàn hảo cho các dịp lễ cưới hoặc kỷ niệm trang trọng."
   },
-  "name": "Hoa hồng trắng kết hợp lá phụ xanh mướt",
-  "image": "/flower_pics/5.jpg",
-  "price": 600000,
-  "category": "bohoa",
-  "__v": 0,
-  "description": "Bó hoa kết hợp nhiều bông hồng trắng nở rộ, xen kẽ lá phụ xanh mướt, gói trong giấy lụa trắng sang trọng.",
-  "meaning": "Đại diện cho tình yêu thuần khiết, sự tôn trọng và khởi đầu mới trọn vẹn. Đây là lựa chọn hoàn hảo cho các dịp lễ cưới hoặc kỷ niệm trang trọng."
-},
-{
-  "_id": {
-    "$oid": "6947e7cd293795506894e27d"
+  {
+    "_id": {
+      "$oid": "6947e7cd293795506894e27d"
+    },
+    "name": "Hoa hướng dương",
+    "image": "/flower_pics/6.jpg",
+    "price": 600000,
+    "category": "bohoa",
+    "__v": 0,
+    "description": "Bó hoa lớn phối hợp giữa hoa hướng dương và các loại hồng tone cam, sử dụng giấy gói đồng màu rực rỡ.",
+    "meaning": "Biểu tượng của năng lượng dồi dào, sự nhiệt huyết và khát khao vươn tới thành công. Rất thích hợp tặng trong các dịp khai trương hoặc chúc mừng thăng tiến."
   },
-  "name": "Hoa hướng dương",
-  "image": "/flower_pics/6.jpg",
-  "price": 600000,
-  "category": "bohoa",
-  "__v": 0,
-  "description": "Bó hoa lớn phối hợp giữa hoa hướng dương và các loại hồng tone cam, sử dụng giấy gói đồng màu rực rỡ.",
-  "meaning": "Biểu tượng của năng lượng dồi dào, sự nhiệt huyết và khát khao vươn tới thành công. Rất thích hợp tặng trong các dịp khai trương hoặc chúc mừng thăng tiến."
-},
-{
-  "_id": {
-    "$oid": "6947e7e7293795506894e2a0"
+  {
+    "_id": {
+      "$oid": "6947e7e7293795506894e2a0"
+    },
+    "name": "Hoa hồng phấn",
+    "image": "/flower_pics/7.jpg",
+    "price": 700000,
+    "category": "bohoa",
+    "__v": 0,
+    "description": "Một bó hoa khổng lồ với sự kết hợp dày đặc của các đóa hồng phấn, điểm xuyết hoa phụ li ti và nơ lụa điệu đà.",
+    "meaning": "Thể hiện sự ngưỡng mộ, lòng biết ơn và vẻ đẹp dịu dàng của người phụ nữ. Bó hoa mang lại cảm giác ngọt ngào và hạnh phúc viên mãn."
   },
-  "name": "Hoa hồng phấn",
-  "image": "/flower_pics/7.jpg",
-  "price": 700000,
-  "category": "bohoa",
-  "__v": 0,
-  "description": "Một bó hoa khổng lồ với sự kết hợp dày đặc của các đóa hồng phấn, điểm xuyết hoa phụ li ti và nơ lụa điệu đà.",
-  "meaning": "Thể hiện sự ngưỡng mộ, lòng biết ơn và vẻ đẹp dịu dàng của người phụ nữ. Bó hoa mang lại cảm giác ngọt ngào và hạnh phúc viên mãn."
-},
-{
-  "_id": {
-    "$oid": "6947e808293795506894e2c4"
+  {
+    "_id": {
+      "$oid": "6947e808293795506894e2c4"
+    },
+    "name": "Hoa hồng",
+    "image": "/flower_pics/8.jpg",
+    "price": 400000,
+    "category": "bohoa",
+    "__v": 0,
+    "description": "Bó hoa sử dụng các loại hồng phấn với độ nở vừa phải, được xếp tròn đều và bao bọc bởi lớp giấy lụa trắng cao cấp cùng nơ thắt điệu đà.",
+    "meaning": "Tượng trưng cho sự khởi đầu mới mẻ, thanh khiết và một tình yêu nhẹ nhàng, lãng mạn. Màu hồng phấn còn thể hiện lòng biết ơn và sự ngưỡng mộ."
   },
-  "name": "Hoa hồng",
-  "image": "/flower_pics/8.jpg",
-  "price": 400000,
-  "category": "bohoa",
-  "__v": 0,
-  "description": "Bó hoa sử dụng các loại hồng phấn với độ nở vừa phải, được xếp tròn đều và bao bọc bởi lớp giấy lụa trắng cao cấp cùng nơ thắt điệu đà.",
-  "meaning": "Tượng trưng cho sự khởi đầu mới mẻ, thanh khiết và một tình yêu nhẹ nhàng, lãng mạn. Màu hồng phấn còn thể hiện lòng biết ơn và sự ngưỡng mộ."
-},
-{
-  "_id": {
-    "$oid": "6947e83d293795506894e30f"
+  {
+    "_id": {
+      "$oid": "6947e83d293795506894e30f"
+    },
+    "name": "Hoa hướng dương cao cấp",
+    "image": "/flower_pics/9.jpg",
+    "price": 350000,
+    "category": "bohoa",
+    "__v": 0,
+    "description": "Sự kết hợp mạnh mẽ giữa những bông hướng dương vàng rực rỡ và các loại hoa phụ trắng, lá xanh trên nền giấy gói kraft nâu cổ điển.",
+    "meaning": "Biểu tượng của sự kiên định, niềm tin và luôn hướng về phía ánh sáng thành công. Đây là món quà tuyệt vời để cổ vũ tinh thần cho bạn bè hoặc người thân."
   },
-  "name": "Hoa hướng dương cao cấp",
-  "image": "/flower_pics/9.jpg",
-  "price": 350000,
-  "category": "bohoa",
-  "__v": 0,
-  "description": "Sự kết hợp mạnh mẽ giữa những bông hướng dương vàng rực rỡ và các loại hoa phụ trắng, lá xanh trên nền giấy gói kraft nâu cổ điển.",
-  "meaning": "Biểu tượng của sự kiên định, niềm tin và luôn hướng về phía ánh sáng thành công. Đây là món quà tuyệt vời để cổ vũ tinh thần cho bạn bè hoặc người thân."
-},
-{
-  "_id": {
-    "$oid": "6947e898293795506894e384"
+  {
+    "_id": {
+      "$oid": "6947e898293795506894e384"
+    },
+    "name": "Giỏ Hoa Hồng",
+    "image": "/flower_pics/10.jpg",
+    "price": 600000,
+    "category": "giohoa",
+    "__v": 0,
+    "description": "Các đóa hồng phấn được cắm tỉ mỉ, đầy đặn trong một hộp/giỏ tròn màu hồng đồng nhất, tạo cảm giác vô cùng ấm cúng và chỉn chu.",
+    "meaning": "Thể hiện sự trân trọng, tình cảm đong đầy và ước nguyện về một cuộc sống viên mãn, hạnh phúc. Phù hợp cho dịp sinh nhật hoặc kỷ niệm ngày cưới."
   },
-  "name": "Giỏ Hoa Hồng",
-  "image": "/flower_pics/10.jpg",
-  "price": 600000,
-  "category": "giohoa",
-  "__v": 0,
-  "description": "Các đóa hồng phấn được cắm tỉ mỉ, đầy đặn trong một hộp/giỏ tròn màu hồng đồng nhất, tạo cảm giác vô cùng ấm cúng và chỉn chu.",
-  "meaning": "Thể hiện sự trân trọng, tình cảm đong đầy và ước nguyện về một cuộc sống viên mãn, hạnh phúc. Phù hợp cho dịp sinh nhật hoặc kỷ niệm ngày cưới."
-},
-{
-  "_id": {
-    "$oid": "6947e8ce293795506894e3d5"
+  {
+    "_id": {
+      "$oid": "6947e8ce293795506894e3d5"
+    },
+    "name": "Giỏ Hoa Tím",
+    "image": "/flower_pics/11.jpg",
+    "price": 450000,
+    "category": "giohoa",
+    "__v": 0,
+    "description": "Giỏ hoa tone màu tím quyến rũ kết hợp cùng sen đá và các loại lá bạc sang trọng, được đặt trong túi giấy/giỏ tinh tế có quai xách.",
+    "meaning": "Màu tím đại diện cho sự thủy chung và lòng ngưỡng mộ sâu sắc. Sự hiện diện của sen đá còn mang ý nghĩa về một tình cảm bền bỉ, vĩnh cửu theo thời gian."
   },
-  "name": "Giỏ Hoa Tím",
-  "image": "/flower_pics/11.jpg",
-  "price": 450000,
-  "category": "giohoa",
-  "__v": 0,
-  "description": "Giỏ hoa tone màu tím quyến rũ kết hợp cùng sen đá và các loại lá bạc sang trọng, được đặt trong túi giấy/giỏ tinh tế có quai xách.",
-  "meaning": "Màu tím đại diện cho sự thủy chung và lòng ngưỡng mộ sâu sắc. Sự hiện diện của sen đá còn mang ý nghĩa về một tình cảm bền bỉ, vĩnh cửu theo thời gian."
-},
-{
-  "_id": {
-    "$oid": "6947e8f3293795506894e3fd"
+  {
+    "_id": {
+      "$oid": "6947e8f3293795506894e3fd"
+    },
+    "name": "Giỏ Hoa Hồng Đỏ - Trắng",
+    "image": "/flower_pics/12.jpg",
+    "price": 550000,
+    "category": "giohoa",
+    "__v": 0,
+    "description": "Một thiết kế rực rỡ với sự kết hợp của hồng đỏ và hoa phụ trắng, cắm theo phong cách tỏa tròn mạnh mẽ trong giỏ mây.",
+    "meaning": "Đỏ và trắng tạo nên thông điệp về một tình yêu nồng nhiệt nhưng chân thành. Màu đỏ còn mang lại may mắn và tài lộc, rất thích hợp để chúc mừng khai trương hoặc khánh thành."
   },
-  "name": "Giỏ Hoa Hồng Đỏ - Trắng",
-  "image": "/flower_pics/12.jpg",
-  "price": 550000,
-  "category": "giohoa",
-  "__v": 0,
-  "description": "Một thiết kế rực rỡ với sự kết hợp của hồng đỏ và hoa phụ trắng, cắm theo phong cách tỏa tròn mạnh mẽ trong giỏ mây.",
-  "meaning": "Đỏ và trắng tạo nên thông điệp về một tình yêu nồng nhiệt nhưng chân thành. Màu đỏ còn mang lại may mắn và tài lộc, rất thích hợp để chúc mừng khai trương hoặc khánh thành."
-},
-{
-  "_id": {
-    "$oid": "6947e95e293795506894e44f"
+  {
+    "_id": {
+      "$oid": "6947e95e293795506894e44f"
+    },
+    "name": "Giỏ Hoa Hồng Xanh Dương - Trắng",
+    "image": "/flower_pics/13.jpg",
+    "price": 550000,
+    "category": "giohoa",
+    "__v": 0,
+    "description": "Giỏ hoa mang sắc xanh dương và trắng chủ đạo, kết hợp giữa hoa hồng trắng tinh khôi và các đóa cẩm tú cầu xanh nhạt nhã nhặn. Thiết kế mang lại cảm giác thanh mát, dịu nhẹ như làn gió biển.",
+    "meaning": "Tượng trưng cho sự bình yên, niềm hy vọng và lòng bao dung. Đây là món quà tinh tế để gửi gắm lời chúc về một cuộc sống an nhiên hoặc bày tỏ sự ngưỡng mộ với người có tâm hồn thanh cao."
   },
-  "name": "Giỏ Hoa Hồng Xanh Dương - Trắng",
-  "image": "/flower_pics/13.jpg",
-  "price": 550000,
-  "category": "giohoa",
-  "__v": 0,
-  "description": "Giỏ hoa mang sắc xanh dương và trắng chủ đạo, kết hợp giữa hoa hồng trắng tinh khôi và các đóa cẩm tú cầu xanh nhạt nhã nhặn. Thiết kế mang lại cảm giác thanh mát, dịu nhẹ như làn gió biển.",
-  "meaning": "Tượng trưng cho sự bình yên, niềm hy vọng và lòng bao dung. Đây là món quà tinh tế để gửi gắm lời chúc về một cuộc sống an nhiên hoặc bày tỏ sự ngưỡng mộ với người có tâm hồn thanh cao."
-},
-{
-  "_id": {
-    "$oid": "6947e979293795506894e479"
+  {
+    "_id": {
+      "$oid": "6947e979293795506894e479"
+    },
+    "name": "Giỏ Hoa Cúc Họa Mi",
+    "image": "/flower_pics/14.jpg",
+    "price": 500000,
+    "category": "giohoa",
+    "__v": 0,
+    "description": "Một giỏ cúc họa mi trắng (hoặc cúc nhỏ) được cắm dày đặc, tròn đầy trong giỏ mây tre đan mộc mạc. Vẻ đẹp đơn sơ nhưng vô cùng cuốn hút bởi sự thuần khiết.",
+    "meaning": "Đại diện cho tình bạn chân thành, sự ngây thơ và sức sống bền bỉ. Giỏ hoa mang thông điệp về sự giản dị nhưng đong đầy chân tình."
   },
-  "name": "Giỏ Hoa Cúc Họa Mi",
-  "image": "/flower_pics/14.jpg",
-  "price": 500000,
-  "category": "giohoa",
-  "__v": 0,
-  "description": "Một giỏ cúc họa mi trắng (hoặc cúc nhỏ) được cắm dày đặc, tròn đầy trong giỏ mây tre đan mộc mạc. Vẻ đẹp đơn sơ nhưng vô cùng cuốn hút bởi sự thuần khiết.",
-  "meaning": "Đại diện cho tình bạn chân thành, sự ngây thơ và sức sống bền bỉ. Giỏ hoa mang thông điệp về sự giản dị nhưng đong đầy chân tình."
-},
-{
-  "_id": {
-    "$oid": "6947e993293795506894e4a4"
+  {
+    "_id": {
+      "$oid": "6947e993293795506894e4a4"
+    },
+    "name": "Giỏ Hoa Cam Ly",
+    "image": "/flower_pics/15.jpg",
+    "price": 500000,
+    "category": "giohoa",
+    "__v": 0,
+    "description": "Giỏ hoa tone cam rực rỡ với sự kết hợp của hoa ly cam và các loài hoa đồng nội. Màu sắc nổi bật tạo hiệu ứng thị giác mạnh mẽ, đầy sức sống.",
+    "meaning": "Tượng trưng cho sự nhiệt huyết, năng lượng tích cực và khát vọng thành công. Rất phù hợp để tặng trong các dịp mừng tân gia hoặc khích lệ tinh thần khởi nghiệp."
   },
-  "name": "Giỏ Hoa Cam Ly",
-  "image": "/flower_pics/15.jpg",
-  "price": 500000,
-  "category": "giohoa",
-  "__v": 0,
-  "description": "Giỏ hoa tone cam rực rỡ với sự kết hợp của hoa ly cam và các loài hoa đồng nội. Màu sắc nổi bật tạo hiệu ứng thị giác mạnh mẽ, đầy sức sống.",
-  "meaning": "Tượng trưng cho sự nhiệt huyết, năng lượng tích cực và khát vọng thành công. Rất phù hợp để tặng trong các dịp mừng tân gia hoặc khích lệ tinh thần khởi nghiệp."
-},
-{
-  "_id": {
-    "$oid": "6947e9b7293795506894e4d0"
+  {
+    "_id": {
+      "$oid": "6947e9b7293795506894e4d0"
+    },
+    "name": "Giỏ Hoa Vintage",
+    "image": "/flower_pics/16.jpg",
+    "price": 500000,
+    "category": "giohoa",
+    "__v": 0,
+    "description": "Một thiết kế đa sắc phong cách vintage, phối hợp giữa hồng pastel, đồng tiền và các loại hoa lá phụ kiện mềm mại. Giỏ hoa toát lên vẻ đẹp dịu dàng, ấm áp.",
+    "meaning": "Mang thông điệp về sự hạnh phúc viên mãn, lòng biết ơn và sự trân trọng những điều tốt đẹp trong cuộc sống."
   },
-  "name": "Giỏ Hoa Vintage",
-  "image": "/flower_pics/16.jpg",
-  "price": 500000,
-  "category": "giohoa",
-  "__v": 0,
-  "description": "Một thiết kế đa sắc phong cách vintage, phối hợp giữa hồng pastel, đồng tiền và các loại hoa lá phụ kiện mềm mại. Giỏ hoa toát lên vẻ đẹp dịu dàng, ấm áp.",
-  "meaning": "Mang thông điệp về sự hạnh phúc viên mãn, lòng biết ơn và sự trân trọng những điều tốt đẹp trong cuộc sống."
-},
-{
-  "_id": {
-    "$oid": "6947e9d6293795506894e4fd"
+  {
+    "_id": {
+      "$oid": "6947e9d6293795506894e4fd"
+    },
+    "name": "Giỏ Hoa Sen Đá",
+    "image": "/flower_pics/17.jpg",
+    "price": 600000,
+    "category": "giohoa",
+    "__v": 0,
+    "description": "Sự kết hợp độc đáo giữa những bông sen đá cứng cáp và các loại dây leo xanh mướt, hoa nhỏ trang trí. Đây là mẫu giỏ hoa có độ bền rất cao so với hoa tươi thông thường.",
+    "meaning": "Biểu tượng của ý chí kiên cường, sự trường tồn và tình cảm vĩnh cửu. Giỏ hoa thay lời khẳng định về một mối quan hệ bền chặt, không bao giờ phai nhạt theo thời gian."
   },
-  "name": "Giỏ Hoa Sen Đá",
-  "image": "/flower_pics/17.jpg",
-  "price": 600000,
-  "category": "giohoa",
-  "__v": 0,
-  "description": "Sự kết hợp độc đáo giữa những bông sen đá cứng cáp và các loại dây leo xanh mướt, hoa nhỏ trang trí. Đây là mẫu giỏ hoa có độ bền rất cao so với hoa tươi thông thường.",
-  "meaning": "Biểu tượng của ý chí kiên cường, sự trường tồn và tình cảm vĩnh cửu. Giỏ hoa thay lời khẳng định về một mối quan hệ bền chặt, không bao giờ phai nhạt theo thời gian."
-},
-{
-  "_id": {
-    "$oid": "6947e9f5293795506894e52b"
+  {
+    "_id": {
+      "$oid": "6947e9f5293795506894e52b"
+    },
+    "name": "Đóa hoa hồng phấn",
+    "image": "/flower_pics/18.jpg",
+    "price": 550000,
+    "category": "top",
+    "__v": 0,
+    "description": "Bó hoa kết hợp giữa các đóa hồng phấn ngọt ngào và hoa phụ li ti, được gói tinh tế trong lớp giấy trắng cao cấp.",
+    "meaning": "Tượng trưng cho sự khởi đầu mới mẻ, lòng biết ơn và một tình yêu lãng mạn, nhẹ nhàng."
   },
-  "name": "Đóa hoa hồng phấn",
-  "image": "/flower_pics/18.jpg",
-  "price": 550000,
-  "category": "top",
-  "__v": 0,
-  "description": "Bó hoa kết hợp giữa các đóa hồng phấn ngọt ngào và hoa phụ li ti, được gói tinh tế trong lớp giấy trắng cao cấp.",
-  "meaning": "Tượng trưng cho sự khởi đầu mới mẻ, lòng biết ơn và một tình yêu lãng mạn, nhẹ nhàng."
-},
-{
-  "_id": {
-    "$oid": "6947ea10293795506894e559"
+  {
+    "_id": {
+      "$oid": "6947ea10293795506894e559"
+    },
+    "name": "Bó hoa hông vàng",
+    "image": "/flower_pics/19.jpg",
+    "price": 600000,
+    "category": "top",
+    "__v": 0,
+    "description": "Sự kết hợp sang trọng giữa hồng vàng và hồng kem nhạt, bao bọc bởi giấy gói tone vàng nắng ấm áp.",
+    "meaning": "Mang thông điệp về một tình bạn gắn kết, sự thịnh vượng và niềm vui rạng rỡ."
   },
-  "name": "Bó hoa hông vàng",
-  "image": "/flower_pics/19.jpg",
-  "price": 600000,
-  "category": "top",
-  "__v": 0,
-  "description": "Sự kết hợp sang trọng giữa hồng vàng và hồng kem nhạt, bao bọc bởi giấy gói tone vàng nắng ấm áp.",
-  "meaning": "Mang thông điệp về một tình bạn gắn kết, sự thịnh vượng và niềm vui rạng rỡ."
-},
-{
-  "_id": {
-    "$oid": "6947ea23293795506894e587"
+  {
+    "_id": {
+      "$oid": "6947ea23293795506894e587"
+    },
+    "name": "Hoa hồng đỏ",
+    "image": "/flower_pics/20.jpg",
+    "price": 400000,
+    "category": "top",
+    "__v": 0,
+    "description": "Những bông hồng đỏ thắm rực rỡ được tuyển chọn kỹ lưỡng, nổi bật trên nền giấy gói trắng tinh khôi.",
+    "meaning": "Biểu tượng kinh điển của tình yêu nồng cháy, sự say mê và lòng ngưỡng mộ sâu sắc."
   },
-  "name": "Hoa hồng đỏ",
-  "image": "/flower_pics/20.jpg",
-  "price": 400000,
-  "category": "top",
-  "__v": 0,
-  "description": "Những bông hồng đỏ thắm rực rỡ được tuyển chọn kỹ lưỡng, nổi bật trên nền giấy gói trắng tinh khôi.",
-  "meaning": "Biểu tượng kinh điển của tình yêu nồng cháy, sự say mê và lòng ngưỡng mộ sâu sắc."
-},
-{
-  "_id": {
-    "$oid": "6947ea3b293795506894e5b5"
+  {
+    "_id": {
+      "$oid": "6947ea3b293795506894e5b5"
+    },
+    "name": "Hoa hướng dương cao cấp",
+    "image": "/flower_pics/21.jpg",
+    "price": 350000,
+    "category": "top",
+    "__v": 0,
+    "description": "Bó hoa gồm nhiều bông hướng dương lớn phối cùng hoa phụ trắng và lá xanh trên nền giấy gói nâu vintage.",
+    "meaning": "Thể hiện sự kiên định, lòng trung thành và luôn hướng về tương lai tươi sáng, đầy năng lượng."
   },
-  "name": "Hoa hướng dương cao cấp",
-  "image": "/flower_pics/21.jpg",
-  "price": 350000,
-  "category": "top",
-  "__v": 0,
-  "description": "Bó hoa gồm nhiều bông hướng dương lớn phối cùng hoa phụ trắng và lá xanh trên nền giấy gói nâu vintage.",
-  "meaning": "Thể hiện sự kiên định, lòng trung thành và luôn hướng về tương lai tươi sáng, đầy năng lượng."
-}]
+  {
+    "_id": {
+      "$oid": "69d501c4727ce31bca03d3f4"
+    },
+    "name": "Giỏ Hoa Cam",
+    "price": 800000,
+    "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRrMw6Q3kUsnpgH1hgidSwQubsuR-Pucr4d_RXymzHoFc2KKL90MnK_2JLPAz6IUmHsKxH2a9Qqk9LpuEVr1N-meNLRAtxalJW9KjfdOGlDt80eUH63YFLL&usqp=CAc",
+    "category": "bohoa",
+    "description": "thanh lịch ",
+    "meaning": "thanhlich"
+  }
+]
