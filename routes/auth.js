@@ -3,6 +3,8 @@ const router = express.Router();
 const bcrypt = require('bcryptjs'); 
 const jwt = require('jsonwebtoken'); 
 const User = require('../models/User');
+const auth = require('../middleware/auth'); // nhớ import
+
 
 // 1. ROUTE ĐĂNG KÝ
 router.post('/register', async (req, res) => {
@@ -64,5 +66,43 @@ router.post('/login', async (req, res) => {
         res.status(500).json({ msg: 'Lỗi máy chủ', error: err.message });
     }
 }); // Kết thúc route login
+
+// 3. ROUTE ĐỔI MẬT KHẨU
+
+router.post('/change-password', auth, async (req, res) => {
+    try {
+        const { oldPassword, newPassword } = req.body;
+
+        // Kiểm tra input
+        if (!oldPassword || !newPassword) {
+            return res.status(400).json({ msg: 'Vui lòng nhập đầy đủ mật khẩu' });
+        }
+
+        // Lấy user từ token
+        const user = await User.findById(req.user.id);
+        if (!user) {
+            return res.status(404).json({ msg: 'Không tìm thấy user' });
+        }
+
+        // So sánh mật khẩu cũ
+        const isMatch = await bcrypt.compare(oldPassword, user.password);
+        if (!isMatch) {
+            return res.status(400).json({ msg: 'Mật khẩu cũ không đúng' });
+        }
+
+        // Hash mật khẩu mới
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(newPassword, salt);
+
+        // Cập nhật
+        user.password = hashedPassword;
+        await user.save();
+
+        res.json({ msg: 'Đổi mật khẩu thành công' });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ msg: 'Lỗi server', error: err.message });
+    }
+});
 
 module.exports = router;
