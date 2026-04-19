@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema({
     email: { 
         type: String, 
         required: true, 
-        unique: true // Để không ai đăng ký trùng email
+        unique: true 
     },
     password: { 
         type: String, 
@@ -20,7 +20,7 @@ const UserSchema = new mongoose.Schema({
     },
     isActive: { 
         type: Boolean, 
-        default: false // Giống như mẫu dữ liệu của bạn
+        default: false 
     }
 });
 

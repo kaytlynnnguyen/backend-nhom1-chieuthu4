@@ -8,6 +8,7 @@ const path = require('path');
 const authRoutes = require("./routes/auth"); 
 const cartRoutes = require("./routes/cart");
 const orderRoutes = require("./routes/orders");
+const userRoutes = require("./routes/users");
 const User = require('./models/User'); 
 const Flower = require('./models/Flower');
 
@@ -60,6 +61,7 @@ mongoose.connect(MONGO_URI)
 app.use("/api/auth", authRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/users", userRoutes); 
 
 app.get("/", (req, res) => {
   res.send("🚀 API Web Bán Hoa đang chạy!");
